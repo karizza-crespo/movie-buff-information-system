@@ -1,0 +1,95 @@
+CREATE TABLE MOVIE(
+Movie_name VARCHAR(50),
+Film_budget INTEGER NOT NULL,
+Running_time INTEGER NOT NULL,
+Box_office INTEGER NOT NULL,
+Release_date DATE NOT NULL,
+constraint movie_moviename_pk PRIMARY KEY (Movie_name)
+);
+
+CREATE TABLE MOVIE_PRODUCER(
+Movie_name VARCHAR(50),
+Producer VARCHAR(50),
+constraint movie_producer_pk PRIMARY KEY (Movie_name, Producer),
+constraint movie_moviename_fk FOREIGN KEY (Movie_name) REFERENCES MOVIE(Movie_name)
+);
+
+CREATE TABLE MOVIE_GENRE(
+Movie_name VARCHAR(50),
+Genre VARCHAR(50),
+constraint movie_genre_pk PRIMARY KEY (Movie_name, Genre),
+constraint movie_moviename_fk FOREIGN KEY (Movie_name) REFERENCES MOVIE(Movie_name)
+);
+
+CREATE TABLE ACTOR(
+Actor_name VARCHAR(50),
+Age INTEGER NOT NULL,
+Gender VARCHAR(1) NOT NULL,
+constraint actor_actorname_pk PRIMARY KEY (Actor_name)
+);
+
+CREATE TABLE ACTS_IN(
+Movie_name VARCHAR(50),
+Actor_name VARCHAR(50),
+Amount_received INTEGER NOT NULL,
+constraint actsin_name_pk PRIMARY KEY (Movie_name, Actor_name),
+constraint actsin_moviename_fk FOREIGN KEY (Movie_name) REFERENCES MOVIE(Movie_name),
+constraint actsin_actorname_fk FOREIGN KEY (Actor_name) REFERENCES ACTOR(Actor_name) 
+);
+
+CREATE TABLE ACTS_IN_MOVIE_ROLE(
+Movie_name VARCHAR(50),
+Actor_name VARCHAR(50),
+Movie_role VARCHAR(50),
+constraint actsinrole_name_pk PRIMARY KEY (Movie_name, Actor_name, Movie_role),
+constraint actsinrole_moviename_fk FOREIGN KEY (Movie_name) REFERENCES MOVIE(Movie_name),
+constraint actsinrole_actorname_fk FOREIGN KEY (Actor_name) REFERENCES ACTOR(Actor_name) 
+);
+
+CREATE TABLE AWARD(
+Award_name VARCHAR(50),
+Movie VARCHAR(50),
+Award_status VARCHAR(1) NOT NULL,
+constraint award_awardname_pk PRIMARY KEY (Award_name, Movie)
+);
+
+CREATE TABLE AWARD_GENRE(
+Award_name VARCHAR(50),
+Movie VARCHAR(50),
+Genre VARCHAR(50),
+constraint award_genre_pk PRIMARY KEY (Award_name, Movie, Genre),
+constraint award_namemovie_fk FOREIGN KEY (Award_name, Movie) REFERENCES AWARD(Award_name, Movie)
+);
+
+CREATE TABLE PRODUCTION_STAFF(
+Staff_name VARCHAR(50),
+Department VARCHAR(50) NOT NULL,
+Gender VARCHAR(1) NOT NULL,
+constraint prodstaff_staffname_pk PRIMARY KEY (Staff_name)
+);
+
+CREATE TABLE IS_PRODUCED_BY(
+Movie_name VARCHAR(50),
+Staff_name VARCHAR(50),
+Amount_received INTEGER NOT NULL,
+constraint production_name_pk PRIMARY KEY (Movie_name, Staff_name),
+constraint production_moviename_fk FOREIGN KEY (Movie_name) REFERENCES MOVIE(Movie_name),
+constraint production_staffname_fk FOREIGN KEY (Staff_name) REFERENCES PRODUCTION_STAFF(Staff_name)
+);
+
+CREATE TABLE IS_PRODUCED_BY_POSITION(
+Movie_name VARCHAR(50),
+Staff_name VARCHAR(50),
+Staff_position VARCHAR(50),
+constraint production_position_pk PRIMARY KEY (Movie_name, Staff_name, Staff_position),
+constraint production_moviename_fk FOREIGN KEY (Movie_name) REFERENCES MOVIE(Movie_name),
+constraint production_staffname_fk FOREIGN KEY (Staff_name) REFERENCES PRODUCTION_STAFF(Staff_name) 
+);
+
+
+CREATE TABLE RECEIVES(
+Actor_name VARCHAR(50),
+Award_name VARCHAR(50),
+Date_received DATE NOT NULL,
+constraint receives_name_pk PRIMARY KEY (Actor_name, Award_name)
+);

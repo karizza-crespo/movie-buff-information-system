@@ -1,0 +1,301 @@
+body{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	background-color:black;
+}
+
+@font-face{
+	font-family:Loyal;
+	src:url('Loyal.ttf');
+}
+
+@font-face{
+	font-family:Sensible;
+	src:url('Sensible.ttf');
+}
+
+#top{
+	position:absolute;
+	width:200%;
+	height:45%;
+	top:0%;
+	left:0%;
+	overflow:hidden;
+}
+
+#b1{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/avengersposter.jpg');
+}
+#b2{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/DespicableMeposter.jpg');
+}
+
+#b3{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/DevilWearsPradaMoviePoster.jpg');
+}
+
+#b4{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/iamnumberfourposter.jpg');
+}
+
+#b5{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/intimeposter.jpg');
+}
+
+#b6{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/newyearseveposter.jpg');
+}
+#b7{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/percyjacksonposter.jpg');
+}
+
+#b8{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/princeofpersiaposter.jpg');
+}
+
+#b9{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/sherlockholmesposter.jpg');
+}
+
+#b10{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/thelastairbenderposter.jpg');
+}
+
+
+#center{
+	background-image:url('pics/pic.jpg');
+	position:absolute;
+	width:100%;
+	height:10%;
+	top:45%;
+	padding-left:5%;
+	left:0%;
+	overflow:hidden;
+	background-color:black;
+	color:black;
+	opacity:0.8;
+	font-family:Sensible;
+	font-size:50px;
+	padding-top:20px;
+}
+
+#bottom{
+
+	position:absolute;
+	width:200%;
+	height:45%;
+	top:55%;
+	left:-100%;
+	overflow:hidden;
+}
+
+#cover1{
+	position:absolute;
+	width:20%;
+	height:45%;
+	top:0%;
+	left:0%;
+	background-color:black;
+	opacity:.85;
+}
+
+#cover2{
+	position:absolute;
+	width:40%;
+	height:45%;
+	top:0%;
+	left:40%;
+	background-color:black;
+	opacity:.85;
+}
+
+#cover3{
+	position:absolute;
+	width:40%;
+	height:45%;
+	top:55%;
+	left:20%;
+	background-color:black;
+	opacity:.85;
+}
+
+#cover4{
+	position:absolute;
+	width:20%;
+	height:45%;
+	top:55%;
+	left:80%;
+	background-color:black;
+	opacity:.85;
+}
+
+#b11{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/bridesmaidsposter.jpg');
+}
+#b12{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/dearjohnposter.jpg');
+}
+
+#b13{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/fastfiveposter.jpg');
+}
+
+#b14{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/madagascar3poster.jpg');
+}
+
+#b15{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/priestposter.jpg');
+}
+
+#b16{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/saltposter.jpg');
+}
+
+#b17{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/suckerpunchposter.jpg');
+}
+
+#b18{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/underworldposter.jpg');
+}
+
+#b19{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/avengersposter.jpg');
+}
+
+#b20{
+	position:relative;
+	height:100%;
+	float:left;
+	width:10%;
+	background-image:url('pics/DespicableMeposter.jpg');
+}
+
+.heading{
+	margin-left:2%;
+}
+
+.links{
+	margin-left:15%;
+	margin-right:15%;
+}
+
+input{
+	font-family:Sensible;
+	font-size:20px;
+}
+
+
+a{
+	padding-left:2.5%;
+	color:gold;
+	
+}
+a:link{
+	color:gold;
+	text-decoration:none;
+	font-size:40px;
+	vertical-align:middle;
+}
+a:visited{
+	color:gold;
+	text-decoration:none;
+	font-size:40px;
+}
+
+a:hover{
+	color:gold;
+	text-decoration:none;
+	font-size:30px;
+	text-transform:uppercase;
+	text-shadow: white 0.1em 0.1em 0.2em;
+}
+
+#logo{
+	margin-left:9%;
+	position:relative;
+	top:0%;
+	height:80%;
+	width:10.5%;
+	float:left;
+	background-image:url('pics/page.jpg');
+}
+
